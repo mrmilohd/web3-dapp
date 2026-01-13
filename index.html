@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ledger dApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Ledger Smart Contract</h1>
+
+        <button id="connectBtn" class="btn primary">
+            Connect Wallet
+        </button>
+
+        <p id="walletAddress">
+            Not connected
+        </p>
+
+        <hr>
+
+        <div class="data-section">
+            <div class="card">
+                <h3>Your Balance</h3>
+                <p id="userBalance">0 ETH</p>
+            </div>
+
+            <div class="card">
+                <h3>Contract Balance</h3>
+                <p id="contractBalance">0 ETH</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h3>Deposit ETH</h3>
+
+        <input
+            type="number"
+            id="depositAmount"
+            placeholder="ETH amount"
+            step="0.01"
+        >
+
+        <br>
+
+        <button id="depositBtn" class="btn success" disabled>
+            Deposit
+        </button>
+
+        <p id="statusMsg"></p>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.0/ethers.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
